@@ -8,7 +8,7 @@ import { app } from "./Apps.js";
 
 
 dotenv.config({
-    path:'./env'
+    path:'./.env'
 })
 
 
