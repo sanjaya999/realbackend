@@ -38,7 +38,7 @@
 
     }, 
     {
-        tiimestamps:true
+        timestamps:true
     }
  )
 
