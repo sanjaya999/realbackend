@@ -16,12 +16,13 @@ app.use(express.static("public"))
 app.use(cookieParser())
 
 
+
 //routers
 
 
 import router from "./routes/user.routes.js"
 
-//routes declatration
+//routes declatration , write other routes also
 
 app.use("/api/v1/users",router);
 
