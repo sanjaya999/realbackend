@@ -77,6 +77,8 @@ userSchema.methods.isPasswordCorrect = async function(password){
    return  await bcrypt.compare(password, this.password)
 }
 
+
+// {},{secret token key} , {expiry}
 userSchema.methods.generateAccessToken = function(){
      return jwt.sign( {
         _id:this._id,
@@ -88,6 +90,9 @@ userSchema.methods.generateAccessToken = function(){
         expiresIn : process.env.ACCESS_TOKEN_EXPIRY
     })
 }
+
+//jwt is bearer token i.e whoever has this token we send info to the user who has this toke
+
 userSchema.methods.generateRefreshToken = function(){
     return jwt.sign({
         _id:this._id,
